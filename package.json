@@ -1,0 +1,21 @@
+{
+  "name": "dojo_practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.12.11"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "jest": "^29.7.0"
+  }
+
+}
