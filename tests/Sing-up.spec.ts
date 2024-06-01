@@ -12,7 +12,3 @@ await page.locator("input[placeholder='Password']").fill('123456');
 await page.locator("//button[@class='btn btn-lg btn-primary pull-xs-right']").click();
 await expect(page.locator("[data-qa-id='site-header'] [href='/@JuliyaVo']")).toBeVisible();
 });
-
-
-
-/
