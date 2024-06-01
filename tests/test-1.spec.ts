@@ -1,11 +1,18 @@
 import { test, expect } from '@playwright/test';
-
-test('test', async ({ page }) => {
-  await page.goto('about:blank');
-  await page.goto('chrome-error://chromewebdata/');
-  await page.goto('https://playwright.dev/');
-  await page.getByRole('link', { name: 'Get started' }).click();
-  await page.getByRole('link', { name: 'How to install Playwright' }).click();
-  await page.getByRole('tabpanel').getByLabel('Copy code to clipboard').click();
-  await expect(page.getByRole('tabpanel')).toContainText('npm init playwright@latest');
+test('SingUp form', async ({ page }) => {
+//go to the 
+await page.goto('https://demo.learnwebdriverio.com/');
+await page.locator("[data-qa-id='site-header'] [href='/register']").click;
+await page.locator("input[placeholder='Username']").click();
+await page.locator("input[placeholder='Username']").fill('JuliyaVo');
+await page.locator("input[placeholder='Email']").click();
+await page.locator("input[placeholder='Email']").fill('test2@gmail.com');
+await page.locator("input[placeholder='Password']").click();
+await page.locator("input[placeholder='Password']").fill('123456');
+await page.locator("//button[@class='btn btn-lg btn-primary pull-xs-right']").click();
+await expect(page.locator("[data-qa-id='site-header'] [href='/@JuliyaVo']")).toBeVisible();
 });
+
+
+
+/
