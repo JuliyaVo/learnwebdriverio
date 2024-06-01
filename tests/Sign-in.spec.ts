@@ -1,8 +1,6 @@
 
 import { test, expect } from '@playwright/test';
 test('Sing in', async ({ page }) => {
-
-
 await page.goto('https://demo.learnwebdriverio.com/');
 await page.locator("[data-qa-id='site-header'] [href='/login']").click;
 await page.locator("input[placeholder='Email']").click();
